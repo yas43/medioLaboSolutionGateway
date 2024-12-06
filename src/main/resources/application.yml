@@ -8,14 +8,14 @@ spring:
     gateway:
       routes:
         - id: patientInformation
-          uri: http://localhost:8085
+          uri: http://patientinfocontainer:8085
           predicates:
             - Path=/patient_info/**
         - id: patientPrescription
-          uri: http://localhost:8086
+          uri: http://patienthistorycontainer:8086
           predicates:
             - Path=/prescription/**
         - id: analyse
-          uri: http://localhost:8091
+          uri: http://analysecontainer:8091
           predicates:
             - Path=/analyse/**
