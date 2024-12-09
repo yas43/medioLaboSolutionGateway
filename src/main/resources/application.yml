@@ -19,3 +19,7 @@ spring:
           uri: http://localhost:8091
           predicates:
             - Path=/analyse/**
+        - id: authentication
+          uri: http://localhost:8082
+          predicates:
+            - Path=/login/**
